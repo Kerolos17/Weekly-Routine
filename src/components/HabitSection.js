@@ -151,30 +151,40 @@ const HabitSection = ({
 
                 // Extract day name from item
                 const getDayName = (item) => {
-                  if (item.includes("الاحد")) return "الأحد";
+                  // أيام الأسبوع
+                  if (item.includes("الأحد")) return "الأحد";
                   if (item.includes("الاثنين")) return "الاثنين";
-                  if (item.includes("الاثلاثاء")) return "الثلاثاء";
-                  if (item.includes("الاربعاء")) return "الأربعاء";
+                  if (item.includes("الثلاثاء")) return "الثلاثاء";
+                  if (item.includes("الأربعاء")) return "الأربعاء";
                   if (item.includes("الخميس")) return "الخميس";
-                  if (item.includes("الجمعه")) return "الجمعة";
+                  if (item.includes("الجمعة")) return "الجمعة";
                   if (item.includes("السبت")) return "السبت";
-                  if (item.includes("مسائية")) return "مساء";
-                  if (item.includes("قراءة") || item.includes("تأمل"))
-                    return "قراءة";
+
+                  // القراءة والتأمل
+                  if (item.includes("الأولى")) return "1";
+                  if (item.includes("الثانية")) return "2";
+                  if (item.includes("الثالثة")) return "3";
+
+                  // التمرين
                   if (item.includes("Session 1")) return "جلسة 1";
                   if (item.includes("Session 2")) return "جلسة 2";
                   if (item.includes("Session 3")) return "جلسة 3";
                   if (item.includes("طويل")) return "طويل";
                   if (item.includes("كارديو")) return "كارديو";
                   if (item.includes("تمطيط")) return "تمطيط";
+
+                  // الإنجليزية
                   if (item.includes("Day 1")) return "يوم 1";
                   if (item.includes("Day 2")) return "يوم 2";
                   if (item.includes("Day 3")) return "يوم 3";
                   if (item.includes("Day 4")) return "يوم 4";
                   if (item.includes("Day 5")) return "يوم 5";
+
+                  // العادات الأساسية
                   if (item.includes("نوم")) return "نوم";
                   if (item.includes("مية")) return "ماء";
                   if (item.includes("سوشيال")) return "سوشيال";
+
                   return `${index + 1}`;
                 };
 
